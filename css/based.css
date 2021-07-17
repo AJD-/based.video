@@ -1,0 +1,32 @@
+body {
+	background-color: black;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+
+.centered-text {
+	text-align: center;
+	font-size: xx-large;
+}
+
+.centered-image {
+	display: block;
+	margin: auto;
+	height: 35%;
+	width: 35%;
+}
+
+img.circle {
+	object-fit: cover;
+	border-radius: 50%;
+}
+
+input.callbutton {
+	height: 25%;
+	width: 25%;
+}
+
+.controls {
+	padding-left: 35%;
+	padding-right: 35%;
+}
