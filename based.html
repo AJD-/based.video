@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<title>Unfathomably Based</title>
+		<meta name="description" content="A Very Based Website"/>
+		<noscript>Now you can't answer the phone ya dummy</noscript>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+		</style>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="./css/based.css">
+		<script>
+			function hover(element) {
+				element.setAttribute('src', './resource/answer.png');
+			}
+			
+			function unhover(element) {
+				element.setAttribute('src', './resource/decline.png');
+			}
+			
+			function pickup() {
+				var audio = document.getElementById('phone');
+				audio.pause();
+				audio.currentTime = 0;
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<p class="centered-text">mobile</p>
+			<img class="centered-image circle" src="./resource/chad.png" alt="Chad from the Based Department"/>
+			<p class="centered-text"><strong>Based Department</strong></p>
+			
+			<div class="container-fluid controls">
+				<input class="col callbutton float-start" type="image" onclick = "pickup()" data-bs-toggle="modal" data-bs-target="#videoModal" onmouseover="hover(this);" onmouseout="unhover(this);" src="./resource/decline.png"/>
+					
+				<input class="col callbutton float-end" type="image" onclick = "pickup()" data-bs-toggle="modal" data-bs-target="#videoModal" src="./resource/answer.png"/>
+			</div>
+		</div>
+		<audio autoplay loop  id="phone">
+			<source src="./resource/calling.mp3">
+		</audio>		
+		
+		<!-- Video Modal -->
+		<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="basedVideoModal" aria-hidden="true">
+		  <div class="modal-dialog modal-fullscreen" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title" id="basedVideoModal">Too based my friend</h5>
+				<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+			  based
+				<iframe width="90%" height="90%" src="https://www.youtube.com/embed/fa8z-rUJeuc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</body>
+</html>
